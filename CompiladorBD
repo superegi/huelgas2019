@@ -1,0 +1,5 @@
+#!/bin/bash
+echo 'Se compilará las BD que estén en la carpeta BDs/BD a usar'
+jupyter nbconvert --execute --ExecutePreprocessor.timeout=1000 'Consolidador BS sueltas.ipynb'
+sleep 2
+echo 'Todo compilado..... ahora hay que ejecutar el Descriptor'
