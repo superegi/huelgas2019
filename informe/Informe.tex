@@ -21,6 +21,7 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[hang, small,up,textfont=it,up]{caption} 
 \usepackage{fancyhdr}
+\usepackage{subcaption}
 
 
 %cabecera y pies
@@ -61,7 +62,7 @@ La fecha de análisis de interés de las manifestaciones masivas fue del viernes
 
 \section{Resultados}
 
-Se estudió un total de X días....., Se registraron en total 12510 atenciones en el periodo estudiado, que al axtrapolarlo a 30 días corresponde a 41700. En la Tabla 1 se muestra el detalle por hospital y la normalización a los 30 días, también se muestran datos de un periodo regular para poder comparar.
+Se estudió un total de X días....., Se registraron en total 12510 atenciones de urgencia en el periodo estudiado, que al axtrapolarlo a 30 días corresponde a 41700 atenciones. En la Tabla 1 se muestra el detalle por hospital y la normalización a los 30 días, también se muestran datos de un periodo regular para poder comparar.
 
 En la Tabla 2 se muestra la frecuencia relativa de categorización para cada periodo estudiado. Se preenta también la diferencia absoluta entre los porcentajes que representa cada categoría de la categorización ESI.
 
@@ -86,18 +87,54 @@ Total                     & 52.117,40      & 41.700,10                & 80,01\% 
 \caption{Cantidad de atenciones por hospital al normalizar las atenciones a 30 días}
 \end{table}
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth,]{../producto/atenciones_porhospital.png}
+\caption{Cantidad de atenciones que en los distintos hospitales del Servicio de Salud Viña del Mar Quillota en el periodo de manifestaciones ciudadanas}
+\label{fig:image2}
+\end{figure}
+
 \begin{table}[H]
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
-\textbf{Triage} & \textbf{Usual} & \textbf{Periodo estudio} & \textbf{Diferencia absoluta} \\ \midrule
-Triage 1        & 0,39\%         & 0,44\%                   & 0,05\%                       \\
-Triage 2        & 18,80\%        & 19,96\%                  & 1,15\%                       \\
-Triage 3        & 28,46\%        & 28,17\%                  & -0,29\%                      \\
-Triage 4        & 50,27\%        & 48,38\%                  & -1,89\%                      \\
-Triage 5        & 2,08\%         & 3,06\%                   & 0,98\%                       \\ \bottomrule
+\textbf{Triage} & \textbf{Usual} & \textbf{Periodo estudio} & \textbf{Incremento porcentual} \\ \hline
+Triage 1        & 0,39\%         & 0,44\%                   & 12,40\%                        \\
+Triage 2        & 18,80\%        & 19,96\%                  & 6,13\%                         \\
+Triage 3        & 28,46\%        & 28,17\%                  & -1,02\%                        \\
+Triage 4        & 50,27\%        & 48,38\%                  & -3,76\%                        \\
+Triage 5        & 2,08\%         & 3,06\%                   & 47,20\%                        \\ \hline
 \end{tabular}
 \caption{Cantidad de atenciones y frecuancia relativa por Triage ESI. Sólo se presentan atenciones de los 3 hospitales que tienen instaurado el Triage ESI (Hospital de Viña, de Quillota y Quilpué)}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth,]{../producto/atenciones_133.png}o
+\caption{Cantidad de atenciones que involucró motivo de consulta 'Constatación de lesiones' o que Carabineros de Chile o Policía de Investigaciones intervinieron en la admisión o custodiaron a paciente luego del alta}
+\label{fig:image2}
+\end{figure}
+
+Se analizó la base de datos y se seleccionó un subgrupo de pacientes de interés: aquellos que dentro del motivo de consulta estaba registrado 'Constatación de lesiones' o fueron ingresados  a la urgencia por personal policial o el alta hospitalaria involucró custodia policial. El grupo de interés contó con 802 consultas en las unidades de Urgencias.
+
+Los paciente que corresponían a este grupo eran principalmente hombres jóvenes con lesiones de carácterter leve. En la Tabla X se presenta un resumen de las diferencias epidemiológicas y del resultado de las atenciones del grupo de interés en un periodo usual y el el estudiado.
+
+
+\begin{table}[H]
+\begin{tabular}{@{}llccc@{}}
+\toprule
+                          &                               & \textbf{Usual} & \textbf{Periodo estudio} & \textbf{Incremento porcentual} \\ \midrule
+                          & Hombres, \%                   & 67,00\%        & 72,00\%                  & 7,46\%                         \\
+                          & Edad, mediana (DS)            & 34,4(15,8)     & 28,9 (13,2)              &                                \\ \cmidrule(l){1-5}
+\multirow{4}{*}{Lesiones} & Sin lesiones, \%              & 46,50\%        & 38,90\%                  & -16,34\%                       \\ 
+                          & Lesiones Leves, \%            & 47,70\%        & 53,40\%                  & 11,95\%                        \\
+                          & Lesiones mediana gravedad, \% & 3,30\%         & 4,60\%                   & 39,39\%                        \\
+                          & Lesiones Graves, \%           & 2,30\%         & 2,91\%                   & 26,52\%                        \\ \cmidrule(l){1-5}
+\multirow{3}{*}{Destino}  & Hospitalizado,  \%            & 0,80\%         & 0,25\%                   & -68,75\%                       \\ 
+                          & Alta, \%                      & 31,09\%        & 24,08\%                  & -22,55\%                       \\
+                          & Custodia policial, \%         & 64,10\%        & 72,30\%                  & 12,79\%                        \\ \cmidrule(l){1-5} 
+\end{tabular}
+\caption{Diferencias epidemiológicas y de la finalización de la atencion en pacientes de interés (que consultan por 'Constatación de lesiones' o fueron ingresados a la unidad de emergencia por personal policial o fueron egresados con custodia policial)}
 \end{table}
 
 
